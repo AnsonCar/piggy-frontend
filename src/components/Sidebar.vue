@@ -35,9 +35,12 @@
 </template>
 
 <script lang="ts" setup>
-const props = defineProps<{
-  title: string
-}>()
+import { useAuthStore } from '../stores/authStore';
+import TPLangButton from './TPLangButton.vue';
 
-const authStore = useAuthStore()
+const props = defineProps<{
+  title: string;
+}>();
+
+const authStore = useAuthStore();
 </script>

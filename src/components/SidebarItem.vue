@@ -5,21 +5,23 @@
         <summary>{{ item.text }}</summary>
         <ul>
           <li v-for="i, num in item.items" :key="num">
-            <NuxtLink :to="i.link" :class="{ active : i.link === route.path }">{{ i.text }}</NuxtLink>
+            <RouterLink :to="i.link" :class="{ active: i.link === route.path }">{{ i.text }}</RouterLink>
           </li>
         </ul>
       </details>
     </li>
     <li v-else v-for="i, num in item.items" :key="num">
-      <NuxtLink :to="i.link" :class="{ active : i.link === route.path }">{{ i.text }}</NuxtLink>
+      <RouterLink :to="i.link" :class="{ active: i.link === route.path }">{{ i.text }}</RouterLink>
     </li>
   </div>
 </template>
 
 <script lang="ts" setup>
-const route = useRoute()
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
 
 const props = defineProps<{
-  items: TTPSidebar[]
-}>()
+  items: TTPSidebar[];
+}>();
 </script>
