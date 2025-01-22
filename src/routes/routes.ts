@@ -4,6 +4,8 @@ import MainLayout from '../layouts/MainLayout.vue';
 import { isLoggedIn } from '../middleware/auth';
 import IndexPage from '../pages/IndexPage.vue';
 import LoginPage from '../pages/LoginPage.vue';
+import TestPage from '../pages/TestPage.vue';
+
 
 const routes = [
     {
@@ -16,6 +18,11 @@ const routes = [
             { path: '', component: LoginPage, name: 'login' },
         ]
     },
+    {
+        path: '/test', component: BaseLayout, children: [
+            { path: '', component: TestPage, name: 'test' },
+        ]
+    }
 ];
 
 const router = createRouter({
@@ -24,11 +31,14 @@ const router = createRouter({
 });
 
 
-
+// Middleware
 router.beforeEach(async (to, from) => {
-    const auth = await isLoggedIn();
-    if (to.name !== 'login' && !auth) {
+    if (to.name === 'test') return true;
+    const isLogin: boolean = await isLoggedIn();
+    if (to.name !== 'login' && !isLogin) {
         return router.push({ name: "login" });
+    } else if (to.name === 'login' && isLogin) {
+        return router.push({ name: "home" });
     }
     return true;
 });
