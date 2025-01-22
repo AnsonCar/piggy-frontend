@@ -1,5 +1,6 @@
 <template>
   <Sidebar :title>
+    <Alert />
     <template v-slot:navbar>
       <Navbar :title>
       </Navbar>
@@ -12,6 +13,7 @@
 </template>
 
 <script lang="ts" setup>
+import Alert from '../components/Alert.vue';
 import Navbar from '../components/Navbar.vue';
 import Sidebar from '../components/Sidebar.vue';
 import SidebarItem from '../components/SidebarItem.vue';
