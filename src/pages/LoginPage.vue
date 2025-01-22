@@ -37,12 +37,13 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { router } from '../routes/routes';
+import { useRouter } from 'vue-router';
 import { useAuthStore } from '../stores/authStore';
 import { obtainToken } from '../utils/db_api';
 import { checkNull } from '../utils/func';
 
 const authStore = useAuthStore();
+const router = useRouter();
 
 const username = ref<string>('');
 const password = ref<string>('');

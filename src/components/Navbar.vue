@@ -1,5 +1,5 @@
 <template>
-	<nav class="navbar bg-base-100 lg:hidden">
+	<nav class="navbar bg-base-200">
 		<div class="flex-none">
 			<label class="btn btn-square btn-ghost lg:hidden" for="my-drawer">
 				<svg class="fill-current" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
@@ -20,6 +20,6 @@
 
 <script lang="ts" setup>
 const props = defineProps<{
-	title: string
-}>()
+	title: string;
+}>();
 </script>

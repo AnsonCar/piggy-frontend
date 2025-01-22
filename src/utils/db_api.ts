@@ -1,41 +1,43 @@
+import { useAuthStore } from "../stores/authStore";
+
 export async function api(url: string, options: RequestInit | undefined) {
   // 取得 url 資源 和 選項
-  const BasisApiURL = "http://localhost:8000"
+  const BasisApiURL = "http://localhost:8000";
   try {
     // 請求
-    const res = await fetch(`${BasisApiURL}${url}`, options)
-    const data = await res.json()
-    return data
+    const res = await fetch(`${BasisApiURL}${url}`, options);
+    const data = await res.json();
+    return data;
   } catch (error) {
     // 如果 請求失敗（Server 死咗 ）
     return {
       "error": "An error occurred.",
       "code": 500,
       "message": "Server Error."
-    }
+    };
   }
 }
 
 export async function apiFile(url: string, options: RequestInit | undefined) {
   // 取得 url 資源 和 選項
-  const BasisApiURL = "http://localhost:8000"
+  const BasisApiURL = "http://localhost:8000";
   try {
     // 請求
-    const res = await fetch(`${BasisApiURL}${url}`, options)
+    const res = await fetch(`${BasisApiURL}${url}`, options);
     const blob = await res.blob(); // 提取实际的文件内容
-    return blob
+    return blob;
   } catch (error) {
     // 如果 請求失敗（Server 死咗 ）
     return {
       "error": "An error occurred.",
       "code": 500,
       "message": "Server Error."
-    }
+    };
   }
 }
 
 export function getHeaders() {
-  const authStore = useAuthStore()
+  const authStore = useAuthStore();
   return {
     Accept: "application/json",
     "Content-Type": "application/json",
