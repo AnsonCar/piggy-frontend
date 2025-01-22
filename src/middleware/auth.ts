@@ -1,6 +1,6 @@
 import { useAuthStore } from '../stores/authStore';
-export async function isLoggedIn() {
+export async function isLoggedIn(): Promise<boolean> {
     const authStore = useAuthStore();
-    const isLoggedIn = await authStore.isLogin();
+    const isLoggedIn: boolean = await authStore.isLogin();
     return isLoggedIn;
 }
