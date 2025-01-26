@@ -2,7 +2,7 @@ export async function checkNull(text: string): Promise<boolean> {
     return text === "" ? true : false;
 }
 
-export async function setCookie(cname, cvalue, exdays) {
+export async function setCookie(cname:string, cvalue:string, exdays:number) {
     const d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     let expires = "expires=" + d.toUTCString();

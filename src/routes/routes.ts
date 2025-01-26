@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory, type RouteLocationNormalizedGeneric, type RouteLocationNormalizedLoadedGeneric } from 'vue-router';
 import BaseLayout from '../layouts/BaseLayout.vue';
 import MainLayout from '../layouts/MainLayout.vue';
 import { isLoggedIn } from '../middleware/auth';
@@ -32,7 +32,8 @@ const router = createRouter({
 
 
 // Middleware
-router.beforeEach(async (to, from) => {
+router.beforeEach(async (to: RouteLocationNormalizedGeneric, from: RouteLocationNormalizedLoadedGeneric) => {
+    from
     if (to.name === 'test') return true;
     const isLogin: boolean = await isLoggedIn();
     if (to.name !== 'login' && !isLogin) {
