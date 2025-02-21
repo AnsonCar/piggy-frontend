@@ -23,7 +23,7 @@
           </label>
         </div>
         <div class="form-control mt-6">
-          <button class="btn btn-primary" @click="login">Login</button>
+          <button class="btn btn-primary w-full" @click="login">Login</button>
         </div>
         <p class="text-error h-6">
           <span v-if="isError">
