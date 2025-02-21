@@ -3,6 +3,6 @@ services:
     build:
       context: .
       dockerfile: ./docker/dockerfile.product
-    container_name: nove-admin
+    container_name: frontend
     ports:
       - 80:80
