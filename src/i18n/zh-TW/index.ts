@@ -1,3 +1,3 @@
 export const basis = {
-    welcome: '你好'
-}
+  welcome: '你好',
+};

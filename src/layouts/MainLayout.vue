@@ -2,8 +2,7 @@
   <Sidebar :title>
     <Alert />
     <template v-slot:navbar>
-      <Navbar :title>
-      </Navbar>
+      <Navbar :title> </Navbar>
     </template>
     <template v-slot:sidebaritem>
       <SidebarItem :items="siderbaritems"></SidebarItem>
@@ -24,7 +23,7 @@ const siderbaritems = [
   {
     items: [
       // { text: '儀表板', link: '/' },
-    ]
+    ],
   },
   {
     text: '工具箱',
@@ -32,15 +31,15 @@ const siderbaritems = [
       // { text: '要事', link: '/todo' },
       // { text: '記帳', link: '/account' },
       // { text: 'QRCode', link: '/qrcode' }
-    ]
+    ],
   },
   {
     text: '身份管理',
     items: [
       // { text: '用戶', link: '/user' },
       // { text: '組別', link: '/group' }
-    ]
-  }
+    ],
+  },
 ];
 </script>
 

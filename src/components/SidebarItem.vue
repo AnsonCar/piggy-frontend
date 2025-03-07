@@ -1,16 +1,16 @@
 <template>
-  <div v-for="item, index in props.items" :key="index">
+  <div v-for="(item, index) in props.items" :key="index">
     <li v-if="item.text">
       <details open>
         <summary>{{ item.text }}</summary>
         <ul>
-          <li v-for="i, num in item.items" :key="num">
+          <li v-for="(i, num) in item.items" :key="num">
             <RouterLink :to="i.link" :class="{ active: i.link === route.path }">{{ i.text }}</RouterLink>
           </li>
         </ul>
       </details>
     </li>
-    <li v-else v-for="i, num in item.items" :key="num">
+    <li v-else v-for="(i, num) in item.items" :key="num">
       <RouterLink :to="i.link" :class="{ active: i.link === route.path }">{{ i.text }}</RouterLink>
     </li>
   </div>

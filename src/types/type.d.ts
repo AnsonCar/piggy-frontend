@@ -15,34 +15,42 @@ type TTPSidebarItem = {
 };
 type TTransactionTableFormData = {
   [key: string]: {
-    uuid: string, user_uuid: string, datetime: string, label: string, price: number;
+    uuid: string;
+    user_uuid: string;
+    datetime: string;
+    label: string;
+    price: number;
   }[];
 };
 
 type TransactionDisplay = {
-  date: string,
-  total: number,
+  date: string;
+  total: number;
   item: {
-    datetime: string,
-    label: string,
-    price: number,
+    datetime: string;
+    label: string;
+    price: number;
     uuid: string;
   }[];
 };
 
 type TTodoTableFormData = {
   [key: string]: {
-    uuid: string, user_uuid: string, datetime: string, label: string, done: boolean;
+    uuid: string;
+    user_uuid: string;
+    datetime: string;
+    label: string;
+    done: boolean;
   }[];
 };
 
 type TodoDisplay = {
-  date: string,
-  total: number,
+  date: string;
+  total: number;
   item: {
-    datetime: string,
-    label: string,
-    done: boolean,
+    datetime: string;
+    label: string;
+    done: boolean;
     uuid: string;
   }[];
 };
@@ -53,7 +61,7 @@ type TAlert = {
 };
 
 type TAlertItem = {
-  level: "info" | "success" | "warning" | "error",
+  level: 'info' | 'success' | 'warning' | 'error';
   message: string;
   timeLog?: string;
 };

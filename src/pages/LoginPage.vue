@@ -2,22 +2,18 @@
   <main class="size-full flex flex-col justify-center items-center">
     <div class="card bg-base-100 w-full max-w-sm shrink-0">
       <div class="card-body pb-36">
-        <h1 class="form-control text-4xl text-center font-bold mb-4">
-          Piggy Flow
-        </h1>
+        <h1 class="form-control text-4xl text-center font-bold mb-4">Piggy Flow</h1>
         <div class="form-control">
           <label class="label">
             <span class="label-text">Username</span>
           </label>
-          <input type="text" placeholder="Username" class="input input-bordered" :class="{ 'input-error': hasUsername }"
-            v-model="username" />
+          <input type="text" placeholder="Username" class="input input-bordered" :class="{ 'input-error': hasUsername }" v-model="username" />
         </div>
         <div class="form-control">
           <label class="label">
             <span class="label-text">Password</span>
           </label>
-          <input type="password" placeholder="password" class="input input-bordered"
-            :class="{ 'input-error': hasPassword }" v-model="password" />
+          <input type="password" placeholder="password" class="input input-bordered" :class="{ 'input-error': hasPassword }" v-model="password" />
           <label class="label">
             <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
           </label>
@@ -26,9 +22,7 @@
           <button class="btn btn-primary w-full" @click="login">Login</button>
         </div>
         <p class="text-error h-6">
-          <span v-if="isError">
-            Login failed. Pleasetry again
-          </span>
+          <span v-if="isError"> Login failed. Pleasetry again </span>
         </p>
       </div>
     </div>
@@ -57,10 +51,10 @@ async function login() {
   if (!hasUsername.value && !hasPassword.value) {
     const res: TokenObtainPairOutputSchema = await obtainToken({
       username: username.value,
-      password: password.value
+      password: password.value,
     });
     if (res.access && res.refresh) {
-      authStore.setToken(res.access, res.refresh,);
+      authStore.setToken(res.access, res.refresh);
       router.push({ name: 'home' });
     } else {
       isError.value = true;

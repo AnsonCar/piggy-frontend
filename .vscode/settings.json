@@ -1,30 +1,28 @@
 {
   /*
-  * BASE
-  */
+   * BASE
+   */
   "files.encoding": "utf8",
   "editor.formatOnSave": true,
   "editor.linkedEditing": true, // 使得同時編輯相同變數或符號更容易。
   "editor.bracketPairColorization.enabled": true, // 啟用括號配對著色功能。
   "editor.guides.bracketPairs": true, // 在括號間顯示視覺導引線
   "editor.defaultFormatter": "esbenp.prettier-vscode", // 預設使用的程式碼格式化工具
-  "editor.rulers": [
-    120,
-  ], // 顯示程式碼寬度參考線
+  "editor.rulers": [120], // 顯示程式碼寬度參考線
   "editor.codeActionsOnSave": [
     "source.organizeImports", // 保存時的整理導入。
     "source.fixAll", // 保存時的自動修復在一輪中計算所有可能的修復
     "addMissingImports" // 在保存時添加所有缺少的導入
   ],
   /*
-  * GIT
-  */
+   * GIT
+   */
   "git.autofetch": true,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
   /*
-  * PRETTIER
-  */
+   * PRETTIER
+   */
   "prettier.singleQuote": true,
   "prettier.printWidth": 240,
   "prettier.trailingComma": "es5",
@@ -63,29 +61,10 @@
   "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
   "javascript.inlayHints.variableTypes.enabled": true,
   // esLint
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "vue",
-    "html",
-    "markdown",
-    "yaml",
-    "toml",
-    "xml",
-    "gql",
-    "graphql",
-    "astro",
-    "css",
-    "less",
-    "scss",
-    "pcss",
-    "postcss"
-  ],
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "html", "markdown", "yaml", "toml", "xml", "gql", "graphql", "astro", "css", "less", "scss", "pcss", "postcss"],
   /*
-  * PYTHON
-  */
+   * PYTHON
+   */
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true,
@@ -100,13 +79,10 @@
   "python.analysis.autoIndent": true,
   "python.analysis.autoFormatStrings": true, // 在字串內輸入“{”時，是否自動加上“f”前綴。
   "python.analysis.completeFunctionParens": true, // 為函數補全添加括號。
-  "black-formatter.args": [
-    "--line-length",
-    "240"
-  ],
+  "black-formatter.args": ["--line-length", "240"],
   /*
-  * GOLANG
-  */
+   * GOLANG
+   */
   "go.useLanguageServer": true,
   "[go]": {
     "editor.formatOnSave": false,
@@ -127,12 +103,10 @@
   "go.inlayHints.parameterNames": true,
   "go.inlayHints.functionTypeParameters": true,
   /*
-  * NGINX
-  */
+   * NGINX
+   */
   "[nginx]": {
     "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
   },
-  "i18n-ally.localesPaths": [
-    "src/i18n"
-  ],
+  "i18n-ally.localesPaths": ["src/i18n"]
 }

@@ -10,23 +10,10 @@
     "noUncheckedSideEffectImports": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
-    },
+      "@/*": ["src/*"]
+    }
   },
-  "filesGlob": [
-    "src/**/*.ts",
-    "test/**/*.ts",
-    "./types/type.d.ts",
-    "./types/api_type.d.ts"
-  ],
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue"
-  ],
-  "types": [
-    "./src/types/*",
-  ]
+  "filesGlob": ["src/**/*.ts", "test/**/*.ts", "./types/type.d.ts", "./types/api_type.d.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "types": ["./src/types/*"]
 }

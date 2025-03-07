@@ -1,3 +1,3 @@
 export const basis = {
-    welcome: 'Welcome'
-}
+  welcome: 'Welcome',
+};

@@ -1,24 +1,23 @@
-import { defineStore } from "pinia";
+import { defineStore } from 'pinia';
 
 export const useAlertStore = defineStore('alertStore', {
-    state: () => ({
-        alertList: [],
-        timeout: 4000
-    } as TAlert),
-    getters: {
-
+  state: () =>
+    ({
+      alertList: [],
+      timeout: 4000,
+    }) as TAlert,
+  getters: {},
+  actions: {
+    addItem(data: TAlertItem) {
+      const timeLog = new Date().toTimeString();
+      this.alertList.push({ ...data, timeLog });
+      setTimeout(() => {
+        this.alertList.shift();
+      }, this.timeout);
     },
-    actions: {
-        addItem(data: TAlertItem) {
-            const timeLog = new Date().toTimeString();
-            this.alertList.push({ ...data, timeLog });
-            setTimeout(() => {
-                this.alertList.shift();
-            }, this.timeout);
-        },
-        clearItem() {
-            this.alertList = [];
-        }
+    clearItem() {
+      this.alertList = [];
     },
-    persist: true
+  },
+  persist: true,
 });
