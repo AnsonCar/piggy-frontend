@@ -1,7 +1,7 @@
 <template>
-  <div class="size-full bg-base-300 p-4 flex-center">
+  <div class="bg-base-300 flex-center size-full p-4">
     <!-- Content -->
-    <div class="rounded-3xl bg-base-100 size-[99%] p-4">
+    <div class="bg-base-100 size-[99%] rounded-3xl p-4">
       <button class="btn" @click="onClick1">Test</button>
       <button class="btn" @click="onClick2">Test</button>
       <button class="btn" @click="onClick3">Test</button>

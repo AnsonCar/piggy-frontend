@@ -4,7 +4,7 @@
     <div class="drawer-content h-[100vh]">
       <!-- Nav -->
       <slot name="navbar"></slot>
-      <main class="p-4 h-[calc(100%-64px)] lg:h-full overflow-y-scroll">
+      <main class="h-[calc(100%-64px)] overflow-y-scroll p-4 lg:h-full">
         <!-- Main -->
         <slot></slot>
       </main>
@@ -12,7 +12,7 @@
     <div class="drawer-side">
       <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
       <ul class="menu bg-base-200 text-base-content text-md min-h-full w-64 p-4">
-        <div class="text-xl font-bold bg-base-200 text-base-content flex items-center mb-4">
+        <div class="bg-base-200 text-base-content mb-4 flex items-center text-xl font-bold">
           <TPLangButton />
           <h1 class="ml-4">{{ props.title }}</h1>
         </div>

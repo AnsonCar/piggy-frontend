@@ -1,8 +1,8 @@
 <template>
-  <main class="size-full flex flex-col justify-center items-center">
+  <main class="flex size-full flex-col items-center justify-center">
     <div class="card bg-base-100 w-full max-w-sm shrink-0">
       <div class="card-body pb-36">
-        <h1 class="form-control text-4xl text-center font-bold mb-4">Piggy Flow</h1>
+        <h1 class="form-control mb-4 text-center text-4xl font-bold">Piggy Flow</h1>
         <div class="form-control">
           <label class="label">
             <span class="label-text">Username</span>

@@ -1,7 +1,7 @@
 <template>
   <div class="dropdown dropdown-end">
     <TPButton tabindex="0" size="sm" role="button" icon="language" class="btn-circle btn-ghost" title="Change Langage Icon" name="Change Langage Icon" />
-    <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow border-2 border-[#25499A]">
+    <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 border-2 border-[#25499A] p-2 shadow">
       <li @click="changeLocale('en')"><a href="#en">English</a></li>
       <li @click="changeLocale('zh-tw')"><a href="#zh_tw">繁體中文</a></li>
       <li @click="changeLocale('zh-cn')"><a href="#zh_cn">简体中文</a></li>

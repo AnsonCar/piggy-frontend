@@ -33,5 +33,6 @@
         "parser": "yaml"
       }
     }
-  ]
+  ],
+  "plugins": ["prettier-plugin-tailwindcss"]
 }

@@ -89,15 +89,15 @@
   }
 
   .tp-input-body {
-    @apply input border-0 rounded-none grow;
+    @apply input grow rounded-none border-0;
   }
 
   .tp-input-error {
-    @apply input flex items-center gap-2 input-error;
+    @apply input input-error flex items-center gap-2;
   }
 
   .tp-input-body-error {
-    @apply input border-x-0 rounded-none grow input-error;
+    @apply input input-error grow rounded-none border-x-0;
   }
 
   .tp-card {
@@ -109,6 +109,6 @@
   }
 
   .flex-center {
-    @apply flex justify-center place-items-center;
+    @apply flex place-items-center justify-center;
   }
 }
