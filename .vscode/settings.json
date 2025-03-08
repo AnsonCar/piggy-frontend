@@ -20,31 +20,6 @@
   "git.autofetch": true,
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
-  /*
-   * PRETTIER
-   */
-  "prettier.singleQuote": true,
-  "prettier.printWidth": 240,
-  "prettier.trailingComma": "es5",
-  "prettier.semi": true,
-  "prettier.tabWidth": 2,
-  // vue
-  "[vue]": {
-    "editor.defaultFormatter": "Vue.volar",
-    "editor.formatOnSave": true,
-    "editor.tabSize": 2
-  },
-  // json
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features",
-    "editor.formatOnSave": true,
-    "editor.tabSize": 2
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features",
-    "editor.formatOnSave": true,
-    "editor.tabSize": 2
-  },
   // ts and js
   "typescript.format.semicolons": "insert",
   "typescript.inlayHints.enumMemberValues.enabled": true,
@@ -54,7 +29,6 @@
   "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
   "typescript.inlayHints.variableTypes.enabled": true,
   "javascript.format.semicolons": "insert",
-  "javascript.inlayHints.enumMemberValues.enabled": true,
   "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
   "javascript.inlayHints.parameterNames.enabled": "all",
   "javascript.inlayHints.parameterTypes.enabled": true,
@@ -107,6 +81,5 @@
    */
   "[nginx]": {
     "editor.defaultFormatter": "ahmadalli.vscode-nginx-conf"
-  },
-  "i18n-ally.localesPaths": ["src/i18n"]
+  }
 }
