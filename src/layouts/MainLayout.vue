@@ -12,10 +12,10 @@
 </template>
 
 <script lang="ts" setup>
-import Alert from '../components/Alert.vue';
 import Navbar from '../components/Navbar.vue';
 import Sidebar from '../components/Sidebar.vue';
 import SidebarItem from '../components/SidebarItem.vue';
+import Alert from '../components/TPAlert.vue';
 
 const title = 'Piggy Flow';
 

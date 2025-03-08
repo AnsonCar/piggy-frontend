@@ -1,3 +1,4 @@
+import { generateUUID } from '@/utils/uuidHelper';
 import { defineStore } from 'pinia';
 
 export const useAlertStore = defineStore('alertStore', {
@@ -10,7 +11,7 @@ export const useAlertStore = defineStore('alertStore', {
   actions: {
     addItem(data: TAlertItem) {
       const timeLog = new Date().toTimeString();
-      this.alertList.push({ ...data, timeLog });
+      this.alertList.push({ ...data, timeLog, uuid: generateUUID() });
       setTimeout(() => {
         this.alertList.shift();
       }, this.timeout);

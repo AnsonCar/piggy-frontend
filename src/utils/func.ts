@@ -15,11 +15,6 @@ export function killToken() {
   location.reload();
 }
 
-// const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-// darkModeQuery.addEventListener('change', (e) => {
-//     document.body.setAttribute('data-theme', e.matches ? 'black' : 'lofi');
-// });
-
 export async function downloalCsv(data: string, filename: string) {
   const url = window.URL.createObjectURL(new Blob([data]));
   const link = document.createElement('a');

@@ -6,5 +6,5 @@
 </template>
 
 <script lang="ts" setup>
-import Alert from '../components/Alert.vue';
+import Alert from '../components/TPAlert.vue';
 </script>

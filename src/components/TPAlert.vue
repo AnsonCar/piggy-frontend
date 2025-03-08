@@ -1,7 +1,7 @@
 <template>
   <div class="absolute right-4 bottom-4 z-50">
     <TransitionGroup name="list" tag="div">
-      <template v-for="alertItem in alertStore.alertList" :key="alertItem.message + alertItem.level + alertItem.timeLog">
+      <template v-for="alertItem in alertStore.alertList" :key="alertItem.uuid">
         <div role="alert" :class="getAlertLevelStyle(alertItem)" class="mb-2 w-64 md:w-96">
           <!-- info -->
           <svg v-if="alertItem.level === 'info'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-6 w-6 shrink-0 stroke-current">

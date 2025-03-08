@@ -63,5 +63,6 @@ type TAlert = {
 type TAlertItem = {
   level: 'info' | 'success' | 'warning' | 'error';
   message: string;
+  uuid: string;
   timeLog?: string;
 };
